@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--background-color-light2);
+}
+
+.iconBox {
+  width: auto;
+}
+
+.icon__light {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--icon-light);
+}
+
+.icon__dark {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--icon-light);
+}
+
+.icon__light:hover,
+.icon__dark:hover {
+  color: var(--main2);
+}
