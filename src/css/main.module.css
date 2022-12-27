@@ -1,11 +1,9 @@
 .main {
-  /* border: 1px solid greenyellow; */
   box-sizing: border-box;
-  padding: 20px 10px;
+  padding: 20px;
   background-color: var(--background-color-light1);
   flex-grow: 1;
   font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .main.dark {
@@ -15,4 +13,47 @@
 
 .list {
   display: flex;
+  /* border: 1px solid tomato; */
+  padding: 5px 0;
+  line-height: 25px;
+  margin-top: 5px;
+}
+
+.list:first-child {
+  margin-top: 0;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: var(--main1-2);
+}
+
+.icon-box {
+  margin-left: auto;
+  width: 25px;
+  height: 25px;
+  line-height: 28px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: var(--delete-light);
+  cursor: pointer;
+}
+
+.icon-box:hover {
+  background-color: var(--hover-light);
+}
+
+.icon-box.dark {
+  background-color: var(--delete-dark);
+}
+
+.icon-box.dark:hover {
+  background-color: var(--hover-dark);
 }

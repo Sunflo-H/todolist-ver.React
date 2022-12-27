@@ -3,9 +3,9 @@ import { ToDoContext } from "../../context/ToDoContext";
 import footer from "../../css/footer.module.css";
 
 export default function Add({ input }) {
-  const { list, addList } = useContext(ToDoContext);
+  const { addItem } = useContext(ToDoContext);
   const handleClick = () => {
-    addList(input);
+    addItem(input);
   };
   return (
     <div className={footer.button} onClick={handleClick}>

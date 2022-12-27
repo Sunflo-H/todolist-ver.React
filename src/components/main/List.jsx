@@ -10,7 +10,7 @@ export default function List({ item }) {
     <div className={main.list}>
       <Complete />
       <Title title={item.title} />
-      <Delete />
+      <Delete id={item.id} />
     </div>
   );
 }

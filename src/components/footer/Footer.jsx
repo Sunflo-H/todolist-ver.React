@@ -9,7 +9,6 @@ export default function Footer() {
   const [input, setInput] = useState("");
   const handleChange = (e) => {
     setInput((prev) => e.target.value);
-    console.log(input);
   };
   return (
     <div
