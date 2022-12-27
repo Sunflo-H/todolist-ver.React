@@ -1,8 +1,9 @@
 .main {
-  height: calc(100% - 160px);
-  border: 1px solid red;
+  border: 1px solid greenyellow;
   box-sizing: border-box;
   padding: 20px 10px;
+  background-color: var(--background-color-light1);
+  flex-grow: 1;
 }
 
 .list {
