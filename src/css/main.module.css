@@ -1,9 +1,16 @@
 .main {
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   box-sizing: border-box;
   padding: 20px 10px;
   background-color: var(--background-color-light1);
   flex-grow: 1;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.main.dark {
+  background-color: var(--background-color-dark1);
+  color: white;
 }
 
 .list {

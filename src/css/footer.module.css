@@ -1,9 +1,12 @@
 .footer {
   width: 100%;
   padding: 20px;
-  border: 1px solid red;
   box-sizing: border-box;
   background-color: var(--background-color-light2);
+}
+
+.footer.dark {
+  background-color: var(--background-color-dark2);
 }
 
 .content-box {
@@ -18,7 +21,7 @@
 .input-box {
   flex-grow: 1;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .input {
@@ -39,12 +42,12 @@
   height: 100%;
   line-height: 36px;
   text-align: center;
-  background-color: var(--main2);
+  background-color: var(--main1-2);
   color: white;
   font-weight: bold;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: var(--main1);
+  background-color: var(--main1-1);
 }

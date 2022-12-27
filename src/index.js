@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom/client";
+import { DarkModeProvider } from "./context/DarkModeContext";
 import reportWebVitals from "./reportWebVitals";
 import ToDoList from "./ToDoList";
 

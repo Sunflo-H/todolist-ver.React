@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
+import { DarkModeProvider } from "./context/DarkModeContext";
 import styles from "./css/index.module.css";
 
 export default function ToDoList() {
@@ -17,13 +18,11 @@ export default function ToDoList() {
 
   return (
     <div className={styles["todolist-box"]}>
-      <Header />
-      <Main />
-      <Footer />
-      {/* <DarkMode></DarkMode> */}
-      {/* <Filter></Filter> */}
-      {/* <Main></Main> */}
-      {/* <Input></Input> */}
+      <DarkModeProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </DarkModeProvider>
     </div>
   );
 }
