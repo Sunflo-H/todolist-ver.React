@@ -3,6 +3,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import { FilterProvider } from "./context/FilterContext";
 import { ToDoProvider } from "./context/ToDoContext";
 import styles from "./css/index.module.css";
 
@@ -21,8 +22,10 @@ export default function ToDoList() {
     <div className={styles["todolist-box"]}>
       <DarkModeProvider>
         <ToDoProvider>
-          <Header />
-          <Main />
+          <FilterProvider>
+            <Header />
+            <Main />
+          </FilterProvider>
           <Footer />
         </ToDoProvider>
       </DarkModeProvider>

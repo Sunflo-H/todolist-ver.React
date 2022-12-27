@@ -5,7 +5,7 @@ import Filter from "./Filter";
 import Mode from "./Mode";
 
 export default function Header() {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <div
       className={

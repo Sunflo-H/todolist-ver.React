@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { FilterContext } from "../../context/FilterContext";
+import { ToDoContext } from "../../context/ToDoContext";
 import header from "../../css/header.module.css";
 
 /**
@@ -6,18 +8,16 @@ import header from "../../css/header.module.css";
  * @param {*} param0
  * @returns
  */
-export default function Button({ name }) {
-  const [isActive, setIsActive] = useState(false);
+export default function Button({ name, active }) {
+  const { setIsComplete } = useContext(FilterContext);
 
-  /**
-   * 1. 클릭 => active
-   */
-  const handleClick = () => {
-    setIsActive((prev) => !prev);
+  const handleClick = (e) => {
+    setIsComplete(name);
   };
+
   return (
     <div
-      className={`${header.button} ${header[isActive]}`}
+      className={active ? `${header.button} ${header.active}` : header.button}
       onClick={handleClick}
     >
       {name}

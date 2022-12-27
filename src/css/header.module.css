@@ -46,7 +46,7 @@
   color: var(--main1-2);
 }
 
-.button.true {
+.button.active {
   color: var(--main1-2);
   /* text-decoration: solid underline 3px var(--hover-light); */
   text-decoration: solid underline 3px var(--main1-2);
