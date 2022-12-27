@@ -6,8 +6,6 @@ export default function Add({ input }) {
   const { list, addList } = useContext(ToDoContext);
   const handleClick = () => {
     addList(input);
-
-    console.log(list);
   };
   return (
     <div className={footer.button} onClick={handleClick}>
