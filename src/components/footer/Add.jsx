@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToDoContext } from "../../context/ToDoContext";
 import footer from "../../css/footer.module.css";
 
-export default function Add() {
-  return <div className={footer.button}>Add</div>;
+export default function Add({ input }) {
+  const { list, addList } = useContext(ToDoContext);
+  const handleClick = () => {
+    addList(input);
+
+    console.log(list);
+  };
+  return (
+    <div className={footer.button} onClick={handleClick}>
+      Add
+    </div>
+  );
 }

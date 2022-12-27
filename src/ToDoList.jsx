@@ -3,6 +3,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import { ToDoProvider } from "./context/ToDoContext";
 import styles from "./css/index.module.css";
 
 export default function ToDoList() {
@@ -19,9 +20,11 @@ export default function ToDoList() {
   return (
     <div className={styles["todolist-box"]}>
       <DarkModeProvider>
-        <Header />
-        <Main />
-        <Footer />
+        <ToDoProvider>
+          <Header />
+          <Main />
+          <Footer />
+        </ToDoProvider>
       </DarkModeProvider>
     </div>
   );

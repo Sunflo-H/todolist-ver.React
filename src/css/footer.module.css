@@ -21,7 +21,6 @@
 .input-box {
   flex-grow: 1;
   height: 100%;
-  /* background-color: red; */
 }
 
 .input {
@@ -49,5 +48,5 @@
 
 .button:hover {
   cursor: pointer;
-  background-color: var(--main1-1);
+  background-color: var(--main1-3);
 }
