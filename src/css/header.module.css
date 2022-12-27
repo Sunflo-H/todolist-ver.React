@@ -1,7 +1,9 @@
 .header {
+  display: flex;
   width: 100%;
   padding: 20px;
   background-color: var(--background-color-light2);
+  box-sizing: border-box;
 }
 
 .iconBox {
@@ -23,4 +25,24 @@
 .icon__light:hover,
 .icon__dark:hover {
   color: var(--main2);
+}
+
+.filter {
+  display: flex;
+  margin-left: auto;
+}
+
+.button {
+  text-align: center;
+  color: var(--main1);
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: var(--main2);
+  text-decoration: solid underline 3px;
+  text-underline-position: under;
 }
