@@ -13,7 +13,7 @@ export default function Main() {
   return (
     <div className={darkMode ? `${main.main} ${main.dark}` : main.main}>
       {list.map((item) => (
-        <List item={item} />
+        <List item={item} key={item.id} />
       ))}
       {/* <List /> */}
     </div>

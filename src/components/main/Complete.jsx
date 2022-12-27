@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToDoContext } from "../../context/ToDoContext";
 import main from "../../css/main.module.css";
 
-export default function Complete() {
-  return <input type="checkbox" className={main.checkbox} />;
+export default function Complete({ id }) {
+  const { completeItem } = useContext(ToDoContext);
+  const handleClick = (e) => {
+    completeItem(id);
+  };
+  return (
+    <input type="checkbox" className={main.checkbox} onClick={handleClick} />
+  );
 }

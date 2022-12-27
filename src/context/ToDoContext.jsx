@@ -10,17 +10,26 @@ export function ToDoProvider({ children }) {
   const addItem = (title) => {
     setList((prev) => [...prev, { title, complete: false, id: count }]);
     setCount((prev) => prev + 1);
-    console.log(list);
   };
 
   const delItem = (id) => {
     setList((prev) => {
-      //   prev.filter((item) => item.id !== id);
       return [...prev.filter((item) => item.id !== id)];
     });
   };
+
+  const completeItem = (id) => {
+    setList((prev) => [
+      ...prev.map((item) => {
+        if (item.id === id) {
+          item.complete = !item.complete;
+        }
+        return item;
+      }),
+    ]);
+  };
   return (
-    <ToDoContext.Provider value={{ list, addItem, delItem }}>
+    <ToDoContext.Provider value={{ list, addItem, delItem, completeItem }}>
       {children}
     </ToDoContext.Provider>
   );

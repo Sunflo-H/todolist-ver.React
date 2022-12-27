@@ -8,7 +8,7 @@ import Title from "./Title";
 export default function List({ item }) {
   return (
     <div className={main.list}>
-      <Complete />
+      <Complete id={item.id} />
       <Title title={item.title} />
       <Delete id={item.id} />
     </div>
