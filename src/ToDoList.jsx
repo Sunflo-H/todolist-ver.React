@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import Main from "./components/Main";
 import styles from "./css/index.module.css";
 
 export default function ToDoList() {
@@ -16,6 +17,7 @@ export default function ToDoList() {
   return (
     <div className={styles["todolist-box"]}>
       <Header />
+      <Main />
       {/* <DarkMode></DarkMode> */}
       {/* <Filter></Filter> */}
       {/* <Main></Main> */}
