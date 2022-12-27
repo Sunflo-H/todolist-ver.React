@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import styles from "../css/header.module.css";
+import header from "../../css/header.module.css";
 
 export default function Mode() {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,11 +10,11 @@ export default function Mode() {
   };
 
   return (
-    <div className={styles.iconBox}>
+    <div className={header.iconBox}>
       {darkMode ? (
-        <FaSun className={styles.icon__dark} onClick={handleIconClick} />
+        <FaSun className={header.icon__dark} onClick={handleIconClick} />
       ) : (
-        <FaMoon className={styles.icon__light} onClick={handleIconClick} />
+        <FaMoon className={header.icon__light} onClick={handleIconClick} />
       )}
     </div>
   );

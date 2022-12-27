@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import main from "../css/main.module.css";
+import main from "../../css/main.module.css";
 
 export default function Delete() {
   return (

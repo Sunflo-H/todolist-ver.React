@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../css/header.module.css";
+import header from "../../css/header.module.css";
 
 /**
  * 버튼은 클릭하면 액티브되는 css 기능과 필터링하는 기능을 한다.
@@ -17,7 +17,7 @@ export default function Button({ name }) {
   };
   return (
     <div
-      className={`${styles.button} ${styles[isActive]}`}
+      className={`${header.button} ${header[isActive]}`}
       onClick={handleClick}
     >
       {name}

@@ -1,5 +1,5 @@
 import React from "react";
-import main from "../css/main.module.css";
+import main from "../../css/main.module.css";
 import Complete from "./Complete";
 import Delete from "./Delete";
 import Title from "./Title";
