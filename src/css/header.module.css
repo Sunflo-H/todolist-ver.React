@@ -43,6 +43,6 @@
 .button:hover {
   cursor: pointer;
   color: var(--main2);
-  text-decoration: solid underline 3px;
+  text-decoration: solid underline 3px var(--hover-light);
   text-underline-position: under;
 }
