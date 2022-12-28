@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ToDoContext = createContext();
 
@@ -11,26 +11,52 @@ export function ToDoProvider({ children }) {
   const [list, setList] = useState([]);
   const [count, setCount] = useState(0);
   const addItem = (title) => {
-    setList((prev) => [...prev, { title, complete: false, id: count }]);
+    setList((prev) => {
+      let current = [...prev, { title, complete: false, id: count }];
+      localStorage.setItem("todolist", JSON.stringify(current));
+      localStorage.setItem("count", JSON.stringify(count));
+      return current;
+    });
     setCount((prev) => prev + 1);
   };
 
   const delItem = (id) => {
     setList((prev) => {
-      return [...prev.filter((item) => item.id !== id)];
+      let current = [...prev.filter((item) => item.id !== id)];
+      localStorage.setItem("todolist", JSON.stringify(current));
+      return current;
     });
   };
 
   const completeItem = (id) => {
-    setList((prev) => [
-      ...prev.map((item) => {
-        if (item.id === id) {
-          item.complete = !item.complete;
-        }
-        return item;
-      }),
-    ]);
+    setList((prev) => {
+      let current = [
+        ...prev.map((item) => {
+          if (item.id === id) {
+            item.complete = !item.complete;
+          }
+          return item;
+        }),
+      ];
+      localStorage.setItem("todolist", JSON.stringify(current));
+      return current;
+    });
   };
+
+  const getListFromLocalStorage = () => {
+    let list = JSON.parse(localStorage.getItem("todolist"));
+    return list;
+  };
+
+  const getCountFromLocalStorage = () => {
+    let count = JSON.parse(localStorage.getItem("count"));
+    return count;
+  };
+
+  useEffect(() => {
+    setList(getListFromLocalStorage());
+    setCount(getCountFromLocalStorage());
+  }, []);
   return (
     <ToDoContext.Provider value={{ list, addItem, delItem, completeItem }}>
       {children}
