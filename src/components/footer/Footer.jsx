@@ -16,7 +16,7 @@ export default function Footer() {
     >
       <div className={footer["content-box"]}>
         <Input input={input} handleChange={handleChange} />
-        <Add input={input} />
+        <Add input={input} setInput={setInput} />
       </div>
     </div>
   );

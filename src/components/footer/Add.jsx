@@ -3,11 +3,14 @@ import { ColorContext } from "../../context/ColorContext";
 import { ToDoContext } from "../../context/ToDoContext";
 import footer from "../../css/footer.module.css";
 
-export default function Add({ input }) {
+export default function Add({ input, setInput }) {
   const { addItem } = useContext(ToDoContext);
   const { color } = useContext(ColorContext);
   const handleClick = () => {
+    console.log(input);
+    if (input === "") return;
     addItem(input);
+    setInput("");
   };
 
   if (color) {
