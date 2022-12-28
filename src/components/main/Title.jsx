@@ -1,6 +1,14 @@
 import React from "react";
 import main from "../../css/main.module.css";
 
-export default function Title({ title }) {
-  return <div className={main.title}>{title}</div>;
+export default function Title({ title, isComplete }) {
+  return (
+    <div
+      className={
+        isComplete ? `${main.title} ${main.complete}` : `${main.title}`
+      }
+    >
+      {title}
+    </div>
+  );
 }

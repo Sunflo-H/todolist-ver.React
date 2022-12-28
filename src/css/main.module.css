@@ -24,12 +24,22 @@
 }
 
 .title {
+  flex-grow: 1;
   font-size: 1.2rem;
+  /* color: red; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.title.complete {
+  color: gray;
+  text-decoration: line-through;
 }
 
 .checkbox {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   margin-right: 10px;
   accent-color: var(--main1-2);
 }
@@ -40,8 +50,10 @@
 
 .icon-box {
   margin-left: auto;
-  width: 25px;
-  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
   line-height: 28px;
   border-radius: 50%;
   font-size: 0.9rem;
