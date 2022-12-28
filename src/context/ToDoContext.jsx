@@ -44,13 +44,19 @@ export function ToDoProvider({ children }) {
   };
 
   const getListFromLocalStorage = () => {
-    let list = JSON.parse(localStorage.getItem("todolist"));
-    return list;
+    let result = list;
+    if (localStorage.getItem("todolist")) {
+      result = JSON.parse(localStorage.getItem("todolist"));
+    }
+    return result;
   };
 
   const getCountFromLocalStorage = () => {
-    let count = JSON.parse(localStorage.getItem("count"));
-    return count;
+    let result = count;
+    if (localStorage.getItem("count")) {
+      result = JSON.parse(localStorage.getItem("count"));
+    }
+    return result;
   };
 
   useEffect(() => {
