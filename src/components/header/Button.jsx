@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { ColorContext } from "../../context/ColorContext";
 import { FilterContext } from "../../context/FilterContext";
 import { ToDoContext } from "../../context/ToDoContext";
 import header from "../../css/header.module.css";
@@ -10,17 +11,35 @@ import header from "../../css/header.module.css";
  */
 export default function Button({ name, active }) {
   const { setIsComplete } = useContext(FilterContext);
+  const { color } = useContext(ColorContext);
 
   const handleClick = (e) => {
     setIsComplete(name);
   };
 
-  return (
-    <div
-      className={active ? `${header.button} ${header.active}` : header.button}
-      onClick={handleClick}
-    >
-      {name}
-    </div>
-  );
+  if (color) {
+    return (
+      <div
+        className={
+          active
+            ? `${header.button} ${header.active} ${header.blue}`
+            : `${header.button} ${header.blue}`
+        }
+        onClick={handleClick}
+      >
+        {name}
+      </div>
+    );
+  } else {
+    return (
+      <div
+        className={
+          active ? `${header.button} ${header.active}` : `${header.button}`
+        }
+        onClick={handleClick}
+      >
+        {name}
+      </div>
+    );
+  }
 }

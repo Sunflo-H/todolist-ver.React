@@ -2,9 +2,12 @@ import { createContext, useState } from "react";
 
 export const ToDoContext = createContext();
 
+/**
+ * list를 생성, 삭제, 완료 하는 Context
+ * @param {*} param0
+ * @returns
+ */
 export function ToDoProvider({ children }) {
-  // todolist에는 내용, 체크(완료) 유무, id
-
   const [list, setList] = useState([]);
   const [count, setCount] = useState(0);
   const addItem = (title) => {

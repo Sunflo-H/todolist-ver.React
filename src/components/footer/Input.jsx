@@ -9,6 +9,7 @@ export default function Input({ input, handleChange }) {
         className={footer.input}
         onChange={handleChange}
         value={input}
+        placeholder="할 일을 입력하세요..."
       />
     </div>
   );

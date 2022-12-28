@@ -12,6 +12,7 @@
 
 .iconBox {
   width: auto;
+  margin-right: 20px;
 }
 
 .icon {
@@ -28,6 +29,24 @@
   color: var(--main1-2);
 }
 
+.icon.blue:hover {
+  color: var(--main2-2);
+}
+
+.color-icon {
+  width: 24px;
+  height: 24px;
+  box-shadow: 1px 1px 2px gray;
+  background-color: var(--main1-2);
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-icon.blue {
+  background-color: var(--main2-2);
+}
+
 .filter {
   display: flex;
   margin-left: auto;
@@ -39,16 +58,27 @@
   font-weight: bold;
   font-size: 1.3rem;
   margin: 0 20px;
+  cursor: pointer;
 }
 
 .button:hover {
-  cursor: pointer;
   color: var(--main1-2);
+}
+
+.button.blue {
+  color: var(--main2-1);
+}
+.button.blue:hover {
+  color: var(--main2-2);
 }
 
 .button.active {
   color: var(--main1-2);
-  /* text-decoration: solid underline 3px var(--hover-light); */
   text-decoration: solid underline 3px var(--main1-2);
   text-underline-offset: 8px;
+}
+
+.button.active.blue {
+  color: var(--main2-2);
+  text-decoration: solid underline 3px var(--main2-2);
 }

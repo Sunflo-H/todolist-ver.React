@@ -50,3 +50,11 @@
   cursor: pointer;
   background-color: var(--main1-3);
 }
+
+.button.blue {
+  background-color: var(--main2-2);
+}
+
+.button.blue:hover {
+  background-color: var(--main2-3);
+}
